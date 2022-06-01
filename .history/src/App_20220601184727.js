@@ -22,7 +22,7 @@ function App() {
                 <Header />
                 <HeaderLine />
                 <Category onReceiveData={receiveData} />
-                <PopularCategory active={active} />
+                <PopularCategory onReceiveData={receiveData} />
                 <Topics active={active} />
             </div>
         </div>

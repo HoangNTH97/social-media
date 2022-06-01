@@ -5,26 +5,13 @@ import styles from './CardItem.module.scss';
 
 const cx = classNames.bind(styles);
 
-function CardItem({ icon, title, desc, className, color, onClick, disabled, ...passProps }) {
-    const props = {
-        onClick,
-        ...passProps, // này để sử dụng  1 số prop mà ta truyền thêm
-    };
-
-    if (disabled) {
-        Object.keys(props).forEach((key) => {
-            if (key.startsWith('on') && typeof props[key] === 'function') {
-                delete props[key];
-            }
-        });
-    }
-
+function CardItem({ icon, title, desc, className, color, onClick }) {
     const classes = cx('card-item', {
         [className]: className,
     });
 
     return (
-        <div className={cx(classes)} {...props}>
+        <div className={cx(classes)}>
             <div className={cx('card-icon')} style={{ backgroundColor: `${color}` }}>
                 {icon}
             </div>

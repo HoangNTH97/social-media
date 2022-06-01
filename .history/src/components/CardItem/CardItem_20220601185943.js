@@ -24,7 +24,7 @@ function CardItem({ icon, title, desc, className, color, onClick, disabled, ...p
     });
 
     return (
-        <div className={cx(classes)} {...props}>
+        <div className={cx(classes)}>
             <div className={cx('card-icon')} style={{ backgroundColor: `${color}` }}>
                 {icon}
             </div>

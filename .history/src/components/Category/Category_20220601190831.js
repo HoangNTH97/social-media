@@ -6,14 +6,14 @@ import styles from './Category.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Category({ onReceiveData }) {
+function Category({ onReceiveData, active }) {
     const [idActive, setIdActive] = useState(1);
-
+    console.log(active);
     return (
         <div className={cx('category-list')}>
             {categoryList.map((item) => (
                 <Button
-                    className={item.id === idActive ? 'active' : ''}
+                    className={item.id === idActive && && 'active'}
                     key={item.id}
                     getApp
                     onClick={() => {

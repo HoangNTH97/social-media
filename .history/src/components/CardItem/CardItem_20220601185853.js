@@ -6,6 +6,10 @@ import styles from './CardItem.module.scss';
 const cx = classNames.bind(styles);
 
 function CardItem({ icon, title, desc, className, color, onClick, disabled, ...passProps }) {
+    const classes = cx('card-item', {
+        [className]: className,
+    });
+
     const props = {
         onClick,
         ...passProps, // này để sử dụng  1 số prop mà ta truyền thêm
@@ -19,12 +23,8 @@ function CardItem({ icon, title, desc, className, color, onClick, disabled, ...p
         });
     }
 
-    const classes = cx('card-item', {
-        [className]: className,
-    });
-
     return (
-        <div className={cx(classes)} {...props}>
+        <div className={cx(classes)}>
             <div className={cx('card-icon')} style={{ backgroundColor: `${color}` }}>
                 {icon}
             </div>

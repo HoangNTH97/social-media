@@ -20,6 +20,10 @@ function PopularCategory({ onReceiveData }) {
                                 icon={item.icon}
                                 title={item.title}
                                 desc={item.desc}
+                                onClick={() => {
+                                    setIdActive(item.id);
+                                    onReceiveData(item.id);
+                                }}
                             />
                         )
                 )}

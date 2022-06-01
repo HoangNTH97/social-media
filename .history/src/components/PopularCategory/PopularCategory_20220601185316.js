@@ -1,12 +1,14 @@
 import classNames from 'classnames/bind';
 import React, { useState } from 'react';
-import { categoryList } from '../../data/data';
+import { categoryList, popularCategory } from '../../data/data';
 import CardItem from '../CardItem/CardItem';
 import styles from './PopularCategory.module.scss';
 
 const cx = classNames.bind(styles);
 
 function PopularCategory({ onReceiveData }) {
+    const [idActive, setIdActive] = useState(1);
+    console.log(idActive);
     return (
         <div className={cx('popular-category')}>
             <h2 className={cx('header-category')}>Popular Category</h2>
@@ -20,6 +22,10 @@ function PopularCategory({ onReceiveData }) {
                                 icon={item.icon}
                                 title={item.title}
                                 desc={item.desc}
+                                onClick={() => {
+                                    setIdActive(item.id);
+                                    onReceiveData(item.id);
+                                }}
                             />
                         )
                 )}

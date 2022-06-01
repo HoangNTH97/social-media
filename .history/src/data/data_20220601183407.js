@@ -27,6 +27,7 @@ export const categoryList = [
                 desc: 'Blog ideas generate more website traffic.',
                 icon: <EditIcon />,
                 color: '#FEF9EA',
+                type: 'all',
             },
             {
                 id: 2,
@@ -34,6 +35,7 @@ export const categoryList = [
                 desc: 'Start write compelling introduction',
                 icon: <EditIcon />,
                 color: '#FEF9EA',
+                type: 'all',
             },
             {
                 id: 3,
@@ -41,6 +43,7 @@ export const categoryList = [
                 desc: 'Generate more copies with article AI',
                 icon: <EditIcon />,
                 color: '#FEF9EA',
+                type: 'all',
             },
             {
                 id: 4,
@@ -48,6 +51,7 @@ export const categoryList = [
                 desc: 'Facebooks ad copies that make your ads.',
                 icon: <FacebookIcon />,
                 color: '#F4F8FF',
+                type: 'all',
             },
             {
                 id: 5,
@@ -89,7 +93,6 @@ export const categoryList = [
     {
         id: 2,
         label: 'Article and Blog',
-        title: 'Article and Blog',
         desc: 'Write your dream SEO article short time.',
         icon: <TextIcon />,
         color: 'cardBlue',
@@ -123,7 +126,6 @@ export const categoryList = [
     {
         id: 3,
         label: 'Social Media',
-        title: 'Social Media',
         desc: 'Write compelling detailed product',
         icon: <VectorIcon />,
         color: 'cardGreen',
@@ -196,10 +198,6 @@ export const categoryList = [
     {
         id: 5,
         label: 'Keyword Research',
-        title: 'Keyword Research',
-        desc: 'Pick your excet keyword for rank anything',
-        icon: <ResearchIcon />,
-        color: 'cardViolet',
         data: [
             {
                 id: 17,
@@ -263,5 +261,29 @@ export const categoryList = [
                 color: '#F4F8FF',
             },
         ],
+    },
+];
+
+export const popularCategory = [
+    {
+        id: 1,
+        title: 'Article and Blog',
+        desc: 'Write your dream SEO article short time.',
+        icon: <TextIcon />,
+        color: 'cardBlue',
+    },
+    {
+        id: 2,
+        title: 'Social Media',
+        desc: 'Write compelling detailed product',
+        icon: <VectorIcon />,
+        color: 'cardGreen',
+    },
+    {
+        id: 3,
+        title: 'Keyword Research',
+        desc: 'Pick your excet keyword for rank anything',
+        icon: <ResearchIcon />,
+        color: 'cardViolet',
     },
 ];

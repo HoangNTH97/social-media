@@ -12,11 +12,7 @@ function Topics({ active }) {
             <div className={cx('topics-header')}>
                 {categoryList.map(
                     (item) =>
-                        item.id === active && (
-                            <h2 key={item.id} className={cx('topics-heading')}>
-                                {item.label}
-                            </h2>
-                        )
+                        item.id === active && <h2 className={cx('topics-heading')}>{item.label}</h2>
                 )}
             </div>
             <div className={cx('topics-list')}>

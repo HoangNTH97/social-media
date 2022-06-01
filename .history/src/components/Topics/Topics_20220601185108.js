@@ -12,11 +12,7 @@ function Topics({ active }) {
             <div className={cx('topics-header')}>
                 {categoryList.map(
                     (item) =>
-                        item.id === active && (
-                            <h2 key={item.id} className={cx('topics-heading')}>
-                                {item.label}
-                            </h2>
-                        )
+                        item.id === active && <h2 className={cx('topics-heading')}>{item.label}</h2>
                 )}
             </div>
             <div className={cx('topics-list')}>
@@ -25,7 +21,7 @@ function Topics({ active }) {
                         item.id === active &&
                         item.data.map((list) => (
                             <CardItem
-                                key={list.id}
+                                key={item.id}
                                 color={list.color}
                                 className={cx('topics-item')}
                                 icon={list.icon}

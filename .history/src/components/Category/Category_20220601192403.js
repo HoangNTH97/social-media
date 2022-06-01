@@ -6,7 +6,7 @@ import styles from './Category.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Category({ onReceiveData }) {
+function Category({ onReceiveData, active }) {
     const [idActive, setIdActive] = useState(1);
 
     return (

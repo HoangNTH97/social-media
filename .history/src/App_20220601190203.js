@@ -21,8 +21,8 @@ function App() {
             <div className={cx('page')}>
                 <Header />
                 <HeaderLine />
-                <Category onReceiveData={receiveData} />
-                <PopularCategory active={active} />
+                <Category onReceiveData={receiveData} active={active} />
+                <PopularCategory onReceiveData={receiveData} />
                 <Topics active={active} />
             </div>
         </div>
