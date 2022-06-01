@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import React from 'react';
+import React, { useState } from 'react';
 import { categoryList } from '../../data/data';
 import CardItem from '../CardItem/CardItem';
 import styles from './PopularCategory.module.scss';
