@@ -9,11 +9,8 @@ const cx = classNames.bind(styles);
 function Topics({ active }) {
     return (
         <div className={cx('topics')}>
-            <div className={cx('topics-header')}>
-                {categoryList.map(
-                    (item) =>
-                        item.id === active && <h2 className={cx('topics-heading')}>{item.label}</h2>
-                )}
+            <div className={cx('topics-heading')}>
+                {categoryList.map((item) => item.id === active && <h2>{item.label}</h2>)}
             </div>
             <div className={cx('topics-list')}>
                 {categoryList.map(
